@@ -17,13 +17,30 @@
   display: block;
   font-family: var(--font-geist-sans);
   font-weight: 700;
-  margin-top: 24px;
+  margin-top: 20px;
   position: relative;
   color: #0d0c4c;
   font-size: 18px;
-  width: 900px;
+  width: 100%;
+  max-width: 900px;
   list-style: disc;
   margin-left: 27px;
+}
+
+@media (max-width: 768px) {
+  .list {
+    font-size: 16px;
+    margin-top: 16px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .list {
+    font-size: 15px;
+    margin-top: 12px;
+    margin-left: 16px;
+  }
 }
 
 .listItem {

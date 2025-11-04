@@ -12,6 +12,12 @@ export default function OverviewPage() {
     <div className={styles.container}>
       <Header />
       <main className={styles.main}>
+        <section className={styles.overviewHeader}>
+          <div className={styles.headerWrapper}>
+            <h1 className={styles.overviewTitle}>Overview</h1>
+            <p className={styles.overviewSubtitle}>About Me • Experience • Projects</p>
+          </div>
+        </section>
         <Summary />
         <Skills />
         <Projects />

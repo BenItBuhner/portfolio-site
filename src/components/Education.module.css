@@ -17,11 +17,34 @@
   font-family: var(--font-geist-sans);
   font-weight: 400;
   margin-left: 0.134px;
-  margin-top: 24px;
+  margin-top: 20px;
   position: relative;
   color: #0d0c4c;
   font-size: 18px;
-  width: 900px;
+  width: 100%;
+  max-width: 900px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    font-size: 16px;
+    margin-top: 16px;
+  }
+
+  .listItem {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    font-size: 15px;
+    margin-top: 12px;
+  }
+
+  .listItem {
+    margin-left: 32px;
+  }
 }
 
 .intro {

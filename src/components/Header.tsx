@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HamburgerMenu from "./HamburgerMenu";
 import styles from "./Header.module.css";
 
 const imgFrame44 = "/assets/frame44.png";
@@ -31,7 +32,7 @@ export default function Header() {
             <Image
               alt=""
               src={imgRectangle377}
-              width={360}
+              width={400}
               height={45}
               className={styles.tagImage}
             />
@@ -45,11 +46,18 @@ export default function Header() {
               Projects
             </Link>
             <span className={styles.bullet}>•</span>
+            <Link href="/blog" className={styles.navLink}>
+              Blog
+            </Link>
+            <span className={styles.bullet}>•</span>
             <Link href="/contact-me" className={styles.navLink}>
               Contact me
             </Link>
           </div>
         </nav>
+        <div className={styles.hamburgerContainer}>
+          <HamburgerMenu />
+        </div>
       </div>
       <div className={styles.headerFade} aria-hidden />
     </header>

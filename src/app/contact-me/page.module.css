@@ -1,0 +1,256 @@
+.container {
+  background-color: #fffef2;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 24px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  line-height: 0;
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+.main > * {
+  width: 100%;
+  max-width: 1220px;
+  padding: 0 162px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .main > * {
+    padding: 0 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main > * {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main > * {
+    padding: 0 20px;
+  }
+}
+
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  gap: 16px;
+}
+
+.contactTitle {
+  font-family: var(--font-geist-sans);
+  font-weight: 100;
+  font-size: 46px;
+  line-height: 1.1;
+  color: #0d0c4c;
+  margin: 0;
+  position: relative;
+}
+
+.contactSubtitle {
+  font-family: var(--font-geist-sans);
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.4;
+  color: rgba(13, 12, 76, 0.5);
+  margin: 0;
+  position: relative;
+  text-align: right;
+  min-width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .contactTitle {
+    font-size: 36px;
+  }
+
+  .contactSubtitle {
+    font-size: 18px;
+  }
+
+  .headerWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .contactSubtitle {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactTitle {
+    font-size: 28px;
+  }
+
+  .contactSubtitle {
+    font-size: 16px;
+  }
+}
+
+.contactContent {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.introText {
+  font-family: var(--font-geist-sans);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #0d0c4c;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .introText {
+    font-size: 16px;
+  }
+}
+
+.contactMethods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .contactMethods {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.contactMethod {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(230, 229, 213);
+  border: 1.75653px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 32px 24px 24px 24px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .contactMethod {
+    padding: 24px 20px 20px 20px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactMethod {
+    padding: 20px 16px 16px 16px;
+    gap: 14px;
+  }
+}
+
+.contactMethod:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contactMethod > * {
+  position: relative;
+}
+
+.methodTitle {
+  font-family: var(--font-geist-sans);
+  font-weight: 500;
+  font-size: 20px;
+  color: #0d0c4c;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .methodTitle {
+    font-size: 18px;
+  }
+}
+
+.arrowIcon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.contactMethod:hover .arrowIcon {
+  opacity: 1;
+}
+
+.methodIcon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+.contactLink {
+  font-family: var(--font-geist-sans);
+  font-weight: 400;
+  font-size: 16px;
+  color: #0d0c4c;
+  display: inline-block;
+}
+
+.methodDescription {
+  font-family: var(--font-geist-sans);
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(13, 12, 76, 0.7);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .contactLink {
+    font-size: 14px;
+  }
+
+  .methodDescription {
+    font-size: 13px;
+  }
+}

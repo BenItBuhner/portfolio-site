@@ -7,7 +7,7 @@ export default function Footer() {
       <div className={styles.footerContent}>
         <div className={styles.social}>
           <a
-            href="https://github.com"
+            href="https://github.com/BenItBuhner"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialLink}
@@ -28,7 +28,7 @@ export default function Footer() {
             </svg>
           </a>
           <a
-            href="https://twitter.com"
+            href="https://x.com/BennettBuhner"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialLink}
@@ -48,7 +48,7 @@ export default function Footer() {
             </svg>
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/bennett-buhner-7515921a6/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialLink}
@@ -77,6 +77,10 @@ export default function Footer() {
           <span className={styles.separator}>•</span>
           <Link href="#projects" className={styles.navLink}>
             Projects
+          </Link>
+          <span className={styles.separator}>•</span>
+          <Link href="#blog" className={styles.navLink}>
+            Blog
           </Link>
           <span className={styles.separator}>•</span>
           <Link href="#contact" className={styles.navLink}>

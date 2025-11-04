@@ -19,10 +19,25 @@
   font-weight: 400;
   line-height: normal;
   margin-left: 0.062px;
-  margin-top: 24px;
+  margin-top: 20px;
   position: relative;
   color: #0d0c4c;
   font-size: 18px;
-  width: 900px;
+  width: 100%;
+  max-width: 900px;
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 16px;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 15px;
+    margin-top: 12px;
+  }
 }
 

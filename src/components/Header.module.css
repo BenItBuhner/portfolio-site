@@ -1,3 +1,7 @@
+:root {
+  --side-padding: 162px;
+}
+
 .header {
   box-sizing: border-box;
   display: flex;
@@ -5,7 +9,8 @@
   gap: 5px;
   height: 82px;
   align-items: center;
-  padding: 3px 0;
+  padding: 0;
+  margin: 0;
   position: sticky;
   top: 0;
   width: 100%;
@@ -61,6 +66,24 @@
   justify-content: center;
 }
 
+@media (max-width: 1024px) {
+  .headerInner {
+    padding: 0 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerInner {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerInner {
+    padding: 0 20px;
+  }
+}
+
 .backgroundImage {
   position: absolute;
   inset: 0;
@@ -82,6 +105,25 @@
   place-items: start;
   position: relative;
   z-index: 10;
+  max-width: calc(100% - 450px);
+}
+
+@media (max-width: 1200px) {
+  .content {
+    max-width: calc(100% - 380px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    max-width: calc(100% - 350px);
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    max-width: none;
+  }
 }
 
 .nameContainer {
@@ -117,16 +159,56 @@
   grid-template-columns: max-content;
   grid-template-rows: max-content;
   position: absolute;
-  right: 162px; /* align with headerInner horizontal padding */
+  right: var(--side-padding);
   top: 50%;
   transform: translateY(-50%);
-  z-index: 20; /* above header gradient */
+  z-index: 20;
+}
+
+@media (max-width: 1200px) {
+  .tagContainer {
+    right: 80px;
+  }
+
+  .tagBackground {
+    width: 350px;
+  }
+
+  .navLinks {
+    font-size: 18px;
+    gap: 5px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tagContainer {
+    right: 60px;
+  }
+
+  .tagBackground {
+    width: 320px;
+  }
+
+  .navLinks {
+    font-size: 16px;
+    gap: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .tagContainer {
+    display: none;
+  }
 }
 
 .tagBackground {
   height: 45px;
   position: relative;
-  width: 360px;
+  width: 400px;
 }
 
 .tagImage {
@@ -138,7 +220,7 @@
 
 .navLinks {
   position: absolute;
-  inset: 0; /* fill tagBackground */
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,4 +252,31 @@
   color: rgba(5, 4, 68, 0.5);
   user-select: none;
   flex-shrink: 0;
+}
+
+.hamburgerContainer {
+  display: none;
+  position: absolute;
+  right: var(--side-padding);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+}
+
+@media (max-width: 1024px) {
+  .hamburgerContainer {
+    right: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hamburgerContainer {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburgerContainer {
+    right: 20px;
+  }
 }

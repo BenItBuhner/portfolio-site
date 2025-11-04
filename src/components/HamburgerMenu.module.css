@@ -1,0 +1,145 @@
+.hamburgerButton {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(230, 229, 213);
+  border: 1.75653px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 30;
+  transition: background-color 0.2s ease;
+  pointer-events: auto;
+}
+
+.hamburgerButton:hover {
+  background-color: rgba(230, 229, 213, 0.9);
+}
+
+.hamburgerLine {
+  width: 20px;
+  height: 2px;
+  background-color: #0d0c4c;
+  transition: all 0.3s ease;
+  border-radius: 1px;
+  transform-origin: center;
+}
+
+.hamburgerButton[aria-expanded="true"] .hamburgerLine:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  transform-origin: center;
+}
+
+.hamburgerButton[aria-expanded="true"] .hamburgerLine:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburgerButton[aria-expanded="true"] .hamburgerLine:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  transform-origin: center;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 254, 242, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 25;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  pointer-events: none;
+}
+
+.overlayOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menuOpen {
+  pointer-events: auto;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  z-index: 30;
+  overflow-y: auto;
+  max-height: 100vh;
+  width: 100%;
+  pointer-events: none;
+}
+
+
+.menuLink {
+  display: block;
+  padding: 18px 162px 18px 162px;
+  font-family: var(--font-geist-sans);
+  font-weight: 200;
+  font-size: 20px;
+  color: rgba(5, 4, 68, 0.7);
+  text-decoration: none;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.menuLinkVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menuLink:last-child {
+  border-bottom: none;
+}
+
+.menuLink:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: rgba(5, 4, 68, 0.9);
+}
+
+@media (max-width: 1024px) {
+  .menuLink {
+    padding: 18px 80px 18px 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuLink {
+    padding: 18px 40px 18px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuLink {
+    padding: 18px 20px 18px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hamburgerButton {
+    display: flex;
+  }
+}
+
